@@ -13,5 +13,5 @@ RUN chown -R www-data:www-data /var/log/apache2
 
 EXPOSE 8080
 
-USER www-data
+USER 1000140000
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
