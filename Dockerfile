@@ -8,7 +8,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 ENV APACHE_LOCK_DIR /var/lock
 ENV APACHE_PID_FILE /var/run/apache2.pid
 RUN echo "Listen 8080" > /etc/apache2/ports.conf
-RUN usermod -aG adm www-data
+RUN chown -R www-data:www-data /var/log/apache2
 
 
 EXPOSE 8080
