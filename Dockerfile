@@ -13,5 +13,4 @@ RUN chown -R 1000140000 /var/log/apache2
 
 EXPOSE 8080
 
-USER 1000140000
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
