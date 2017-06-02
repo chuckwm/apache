@@ -7,7 +7,6 @@ ENV APACHE_LOG_DIR /var/log/apache2
 ENV APACHE_LOCK_DIR /var/lock
 ENV APACHE_PID_FILE /var/run/apache2.pid
 RUN echo "$(ip a s | sed -n 's/inet \(10.*\)\/.*$/\1/p')	george" >> /etc/hosts
-RUN hostname george
 RUN echo "Listen 8080" > /etc/apache2/ports.conf
 RUN usermod -aG root www-data
 RUN chgrp -R 0 /var/log/apache2 \
