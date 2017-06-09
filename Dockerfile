@@ -12,6 +12,7 @@ RUN echo "ServerName $(hostname)" >> /etc/apache2/conf/httpd.conf
 RUN usermod -aG root www-data
 RUN chgrp -R 0 /var/log/apache2 \
   && chmod -R g+rwX /var/log/apache2
+RUN chmod g+rwx /var/run
 
 
 EXPOSE 8080
